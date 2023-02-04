@@ -11,19 +11,32 @@ app.get('/', (req, res) => {
     res.send('Hola, este es mi primer servidor en Node')
 })
 app.get('/products', async (req, res) => {
-    let {limit} = req.query
-    console.log(await adm.getProducts())
-    const response = limit ? (await adm.getProducts()).slice(0, parseInt(limit)) : await adm.getProducts()
-    res.send(response)
+    let limit = parseInt(req.query.limit)
+    let products = await adm.getProducts()
+    if(limit){
+        if(limit > 0 && limit <= products.length){
+            res.send(products.slice(0, limit))
+        } else {
+            res.status(400).send('No results found')
+        }
+    } else {
+        res.send(products)
+    }
 })
 app.get('/products/:pid', async (req, res) => {
     const id = req.params.pid
-    res.send(await adm.getProductById(id))
+    const response = await adm.getProductById(id)
+    if(response){
+        res.send(await adm.getProductById(id))
+    } else {
+        res.status(404).send('No results found')
+    }
 })
 
 // -------------------- EJECUCIÓN DEL SERVIDOR -------------------
 
 app.listen(PORT, () => {
+    console.log('--------------------------------------')
     console.log(`Server on port ${PORT}`)
 })
 
