@@ -1,0 +1,92 @@
+[
+	{
+		"title": "Campera 1",
+		"description": "Color azul",
+		"price": 16400,
+		"thumbnail": "thumbnail-link",
+		"code": "1241359301",
+		"stock": 23,
+		"id": 1
+	},
+	{
+		"title": "Campera 2",
+		"description": "Color negro",
+		"price": 16400,
+		"thumbnail": "thumbnail-link",
+		"code": "124135163",
+		"stock": 15,
+		"id": 2
+	},
+	{
+		"title": "Campera 3",
+		"description": "Color blanco",
+		"price": 16400,
+		"thumbnail": "thumbnail-link",
+		"code": "12413511523",
+		"stock": 12,
+		"id": 3
+	},
+	{
+		"title": "Remera 1",
+		"description": "Color negro",
+		"price": 4500,
+		"thumbnail": "thumbnail-link",
+		"code": "4918274987",
+		"stock": 22,
+		"id": 4
+	},
+	{
+		"title": "Remera 2",
+		"description": "Color rojo",
+		"price": 4500,
+		"thumbnail": "thumbnail-link",
+		"code": "4918274125",
+		"stock": 21,
+		"id": 5
+	},
+	{
+		"title": "Remera 3",
+		"description": "Color azul",
+		"price": 4500,
+		"thumbnail": "thumbnail-link",
+		"code": "4918274235",
+		"stock": 28,
+		"id": 6
+	},
+	{
+		"title": "Pantalon 1",
+		"description": "Color azul",
+		"price": 2500,
+		"thumbnail": "thumbnail-link",
+		"code": "346345431",
+		"stock": 14,
+		"id": 7
+	},
+	{
+		"title": "Pantalon 2",
+		"description": "Color negro",
+		"price": 2500,
+		"thumbnail": "thumbnail-link",
+		"code": "3463412451",
+		"stock": 20,
+		"id": 8
+	},
+	{
+		"title": "Pantalon 3",
+		"description": "Color blanco",
+		"price": 2500,
+		"thumbnail": "thumbnail-link",
+		"code": "346345354",
+		"stock": 16,
+		"id": 9
+	},
+	{
+		"title": "Zapatillas 1",
+		"description": "Color negro",
+		"price": 21000,
+		"thumbnail": "thumbnail-link",
+		"code": "3525392835",
+		"stock": 10,
+		"id": 10
+	}
+]
