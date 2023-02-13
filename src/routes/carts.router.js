@@ -22,6 +22,12 @@ routerCart.post('/', async (req, res) => {
     res.send(result)
 })
 
+routerCart.delete('/:cid', async (req, res) => {
+    let id = req.params.cid
+    let mensaje = await cartManager.deleteCart(id) 
+    res.send(mensaje)
+})
+
 routerCart.post('/:cid/product/:pid', async (req, res) => {
     let cid = req.params.cid
     let pid = req.params.pid
@@ -30,10 +36,12 @@ routerCart.post('/:cid/product/:pid', async (req, res) => {
     res.send(result)
 })
 
-routerCart.delete('/:cid', async (req, res) => {
-    let id = req.params.cid
-    let mensaje = await cartManager.deleteCart(id) 
-    res.send(mensaje)
+routerCart.delete('/:cid/product/:pid', async (req, res) => {
+    let cid = req.params.cid
+    let pid = req.params.pid
+    let product = await productManager.getProductById(pid)
+    let result = await cartManager.deleteProductFromCart(cid, product)
+    res.send(result)
 })
 
 export default routerCart

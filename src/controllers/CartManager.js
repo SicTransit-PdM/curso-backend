@@ -78,6 +78,36 @@ class CartManager {
             return `Agregado nuevo producto: "${product.title}" al carrito ${cart.id}`
         }
     }
+    async deleteProductFromCart(cartId, product){
+        console.log('--------------------------')
+        console.log(`DELETING ${product.title} from cart ${cartId} => id: `, product.id)
+        const data = await this.getCarts()
+        const cart = data.find(c => c.id == id)
+        if(!cart){ 
+            console.error('ERROR: Invalid cart')
+            return 'Carrito no existe'
+        }
+        let cartProducts = cart.products
+        const toDelete = cartProducts.find(p => p.id == product.id)
+        console.log(`CHECKING: "${product.title}" is in cart? =>`, toDelete ? true : false)
+        if(toDelete){
+            let index = cartProducts.findIndex(p => p.id == product.id)
+            if(cartProducts[index].quantity>0){
+                cartProducts[index].quantity--
+                console.log(`DELETED: "${product.title}" quantity modified successfully`)
+                await fs.writeFile(this.path, JSON.stringify(data, null, '\t'))
+                return `Eliminado 1 => Total: ${toDelete.quantity}`
+            } else {
+                cartProducts.splice(index, 1)
+                console.log(`DELETED: "${product.title}" deleted successfully from cart ${cartId}`)
+                await fs.writeFile(this.path, JSON.stringify(data, null, '\t'))
+                return `Producto eliminado`
+            }
+        } else {
+            console.error(`ERROR: Product do not exists`)
+            return `El producto no existe`
+        }
+    }
 }
 
 export default CartManager
