@@ -88,6 +88,28 @@
 		"id": 8
 	},
 	{
+		"title": "Pantalon 3",
+		"description": "Color blanco",
+		"price": 2500,
+		"category": "Indumentaria",
+		"code": "346345354",
+		"stock": 16,
+		"status": true,
+		"thumbnails": [],
+		"id": 9
+	},
+	{
+		"title": "Zapatillas 1",
+		"description": "Color negro",
+		"price": 21000,
+		"category": "Indumentaria",
+		"code": "3525392835",
+		"stock": 10,
+		"status": true,
+		"thumbnails": [],
+		"id": 10
+	},
+	{
 		"title": "Samsung A53 con fotos",
 		"description": "Color negro",
 		"price": 147000,
@@ -100,28 +122,6 @@
 			"https://images.samsung.com/is/image/samsung/p6pim/ar/2202/gallery/ar-galaxy-a53-5g-a536-sm-a536ezkaaro-531544669?$684_547_PNG$",
 			"https://images.samsung.com/is/image/samsung/p6pim/ar/2202/gallery/ar-galaxy-a53-5g-a536-sm-a536ezkaaro-531544665?$684_547_PNG$"
 		],
-		"id": 10
-	},
-	{
-		"title": "Pantalon 3",
-		"description": "Color blanco",
-		"price": 2500,
-		"category": "Indumentaria",
-		"code": "346345354",
-		"stock": 16,
-		"status": true,
-		"thumbnails": [],
 		"id": 11
-	},
-	{
-		"title": "Zapatillas 1",
-		"description": "Color negro",
-		"price": 21000,
-		"category": "Indumentaria",
-		"code": "3525392835",
-		"stock": 10,
-		"status": true,
-		"thumbnails": [],
-		"id": 12
 	}
 ]

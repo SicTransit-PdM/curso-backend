@@ -1,21 +1,15 @@
 class Product {
-    constructor(title, description, price, thumbnail, code, stock){
-        this.title = title,
-        this.description = description,
+    constructor(title, description, price, category, code, stock, status = true, thumbnails = []) {
+        this.title = title
+        this.description = description
         this.price = price
-        this.thumbnail = thumbnail
+        this.category = category
         this.code = code
         this.stock = stock
-        this.id = Product.addId()
-    }
-    static addId(){
-        if(this.idIncremental){
-            this.idIncremental++
-        } else {
-            this.idIncremental = 1
-        }
-        return this.idIncremental
+        this.status = status
+        this.thumbnails = thumbnails
     }
 }
+
 
 export default Product
