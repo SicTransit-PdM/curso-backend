@@ -1,6 +1,6 @@
 import { Router } from "express"; 
 import ProductManager from "../controllers/ProductManager.js";
-import generateProducts from "../helpers/generateProducts.js";
+//import generateProducts from "../helpers/generateProducts.js";
 
 const routerProduct = Router()
 const productManager = new ProductManager('src/data/products.JSON')
@@ -21,23 +21,28 @@ routerProduct.get('/', async (req, res) => {
 
 routerProduct.get('/:pid', async (req, res) => {
     let id = req.params.pid
+    console.log('ROUTER: ID sent => ', id)
     let product = await productManager.getProductById(id)
     res.send(product)
 })
 
 routerProduct.post('/', async (req, res) => { 
+    console.log('ROUTER: Request body sent =>', req.body)
     let result = await productManager.addProduct(req.body)
     res.send(result)
 })
 
 routerProduct.put('/:pid', async (req, res) => { 
     let id = req.params.pid
+    console.log('ROUTER: Request body sent =>', req.body)
+    console.log('ROUTER: ID sent => ', id)
     let result = await productManager.updateProduct(id, req.body)
     res.send(result)
 })
 
 routerProduct.delete('/:pid', async (req, res) => {
     let id = req.params.pid
+    console.log('ROUTER: ID sent => ', id)
     let result = await productManager.deleteProduct(id) 
     res.send(result)
 })

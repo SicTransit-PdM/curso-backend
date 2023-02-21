@@ -54,15 +54,15 @@ class ProductManager {
             }
         }
     }
-    async updateProduct(id, title, description, price, category, code, stock, status, thumbnails){
+    async updateProduct(id, {title, description, price, category, code, stock, status, thumbnails}){
         console.log('--------------------------')
         console.log('UPDATING ...')
         const data = await this.getProducts()
         let toUpdate = await this.getProductById(id)
+        console.log('DATA RECEIVED => ',id,title,description,price,category,code,stock,status,thumbnails   )
         console.log(`CHECKING: Product with "id: ${id}" exists?`, toUpdate ? true : false)
         if (toUpdate){
             console.log(`UPDATING "${toUpdate.title}"`)
-            console.log('--------------------------')
             let index = data.findIndex(p => p.id == id)
             toUpdate.title = title ?? toUpdate.title
             toUpdate.description = description ?? toUpdate.description

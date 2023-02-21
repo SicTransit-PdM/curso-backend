@@ -1,0 +1,27 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+section{
+    min-height: 450px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px 0px 40px;
+    background-color: antiquewhite;
+    .nav-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 400px;
+        list-style: none;
+    }
+}
+
+footer{
+    height: 80px;
+}

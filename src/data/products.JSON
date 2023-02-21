@@ -116,10 +116,10 @@
 	{
 		"title": "Zapatillas 1",
 		"description": "Color negro",
-		"price": 21000,
+		"price": "20000",
 		"category": "Indumentaria",
-		"code": "3525392835",
-		"stock": 10,
+		"code": "123513514",
+		"stock": "123",
 		"status": true,
 		"thumbnails": [],
 		"id": 12
